@@ -1,0 +1,152 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0c0f2d;
+}
+
+/* Grid layout for pricing tables */
+.pricing-table-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Pricing Table Container */
+.pricing-table-container {
+    width: 270px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+}
+
+/* Styling to blur and gray out the other pricing tables */
+.blurred {
+    filter: blur(6px) grayscale(70%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+/* Pricing Header Variations */
+.pricing-header-1 { background-color: #607D8B; } /* Slate Blue */
+.pricing-header-2 { background-color: #4CAF50; } /* Green */
+.pricing-header-3 { background-color: #9C27B0; } /* Purple */
+.pricing-header-4 { background-color: #D4AF37; } /* Gold */
+
+.pricing-header {
+    padding: 20px;
+    position: relative;
+}
+
+.plan-title-image {
+    max-width: 157px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+}
+
+.price-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.price-box h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #333;
+}
+
+.divider {
+    height: 2.5px;
+    background-color: #333;
+    margin: 15px 0;
+}
+
+.features-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.pricing-features {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+    color: #fff;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.pricing-features ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-features ul li {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+/* Purchase Button Variations */
+.btn-purchase-1 { background-color: #607D8B; } /* Slate Blue */
+.btn-purchase-2 { background-color: #4CAF50; } /* Green Button */
+.btn-purchase-3 { background-color: #9C27B0; } /* Purple */
+.btn-purchase-4 { background-color: #D4AF37; } /* Gold */
+
+/* Common button styles */
+.btn-purchase {
+    color: transparent; /* Hide original button text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    white-space: nowrap; /* Prevents text from breaking into new line */
+}
+
+.btn-purchase::before {
+    content: "Purchase Now"; /* Default text */
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; /* Ensure the text doesn't break into two lines */
+}
+
+/* Hover effect to change button text */
+.btn-purchase:hover::before {
+    content: "Click To Buy"; /* Change text to Buy Me on hover */
+}
+
+.btn-purchase:hover {
+    transform: scale(1.2); /* Button zoom on hover */
+}
+
+.btn-purchase-1:hover { background-color: #E64A19; } /* Darker orange */
+.btn-purchase-2:hover { background-color: #E64A19; } /* Darker orange */
+.btn-purchase-3:hover { background-color: #E64A19; } /* Darker orange */
+.btn-purchase-4:hover { background-color: #E64A19; } /* Darker orange */
+
+/* Pricing Table hover effect */
+.pricing-table-container:hover {
+    transform: scale(1.13); /* Zoom effect on hover */
+}
